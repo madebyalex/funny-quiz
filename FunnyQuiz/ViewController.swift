@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalQuestionsLbl: UILabel!
     
     let quiz = [
-        ["Pink is the most common colour of toilet paper in France", "True"],
-        ["Scooby Doo’s full name is Scooberdy Doo", "False"],
-        ["You can sneeze in your sleep", "False"]
+        Question(text: "Pink is the most common colour of toilet paper in France", answer: "True"),
+        Question(text: "Scooby Doo’s full name is Scooberdy Doo", answer: "True"),
+        Question(text: "You can sneeze in your sleep", answer: "False")
     ]
     
     var questionNumber = 0
@@ -48,11 +48,11 @@ class ViewController: UIViewController {
     
     func updateUI() {
         currentQuestionLbl.text = String(questionNumber + 1)
-        questionLbl.text = quiz[questionNumber][0]
+        questionLbl.text = quiz[questionNumber].text
     }
     
     func checkAnswer(sender: String) {
-        if quiz[questionNumber][1] == sender {
+        if quiz[questionNumber].answer == sender {
             print("Correct!")
         } else {
             print("Wrong")
