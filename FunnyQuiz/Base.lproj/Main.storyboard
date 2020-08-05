@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,47 +17,47 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg_quiz" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-wC-oXu">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <variation key="heightClass=compact" image="Bg_quiz_horiz"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YAA-Nh-bPQ">
-                                <rect key="frame" x="120" y="20" width="656" height="158.5"/>
+                                <rect key="frame" x="32" y="398" width="350" height="100.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jmp-tY-vCG">
-                                        <rect key="frame" x="249" y="0.0" width="158" height="34"/>
+                                        <rect key="frame" x="87.5" y="0.0" width="175" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOX-fH-tIr">
-                                                <rect key="frame" x="0.0" y="0.0" width="97" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOX-fH-tIr">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="34"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="28"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4J-N8-2Rg" userLabel="Current question">
-                                                <rect key="frame" x="103" y="0.0" width="12.5" height="34"/>
+                                                <rect key="frame" x="120" y="0.0" width="12.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o2-8c-Uha">
-                                                <rect key="frame" x="121.5" y="0.0" width="18" height="34"/>
+                                                <rect key="frame" x="138.5" y="0.0" width="18" height="34"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3L-as-azi" userLabel="Total questions">
-                                                <rect key="frame" x="145.5" y="0.0" width="12.5" height="34"/>
+                                                <rect key="frame" x="162.5" y="0.0" width="12.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink is the most common colour of toilet paper in France" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-qB-tCa" userLabel="Question">
-                                        <rect key="frame" x="28" y="42" width="600" height="116.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-qB-tCa" userLabel="Question">
+                                        <rect key="frame" x="46" y="42" width="258" height="58.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="Ebc-ba-pYJ">
                                                 <variation key="heightClass=compact" constant="600"/>
@@ -96,10 +96,10 @@
                                 </variation>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poY-3H-xbr" userLabel="progressBarWrap">
-                                <rect key="frame" x="144" y="283" width="608" height="12"/>
+                                <rect key="frame" x="32" y="682" width="350" height="12"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-n7-8Ot">
-                                        <rect key="frame" x="0.0" y="4.5" width="608" height="4"/>
+                                        <rect key="frame" x="0.0" y="4.5" width="350" height="4"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="3" id="Kfb-ck-ksa"/>
                                         </constraints>
@@ -116,17 +116,20 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-g1-fyl" userLabel="btnGroup">
-                                <rect key="frame" x="144" y="315" width="608" height="54"/>
+                                <rect key="frame" x="32" y="714" width="350" height="124"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-fQ-pnt">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mws-Zd-lDn">
-                                                <rect key="frame" x="0.0" y="5" width="296" height="44"/>
+                                                <rect key="frame" x="0.0" y="5" width="350" height="44"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
                                                 <state key="normal" title="True">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iwr-LT-ECd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -139,14 +142,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsn-Rs-8Xx">
-                                        <rect key="frame" x="312" y="0.0" width="296" height="54"/>
+                                        <rect key="frame" x="0.0" y="70" width="350" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-bC-qPo">
-                                                <rect key="frame" x="0.0" y="5" width="296" height="44"/>
+                                                <rect key="frame" x="0.0" y="5" width="350" height="44"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
                                                 <state key="normal" title="False">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xl-z8-QV6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -207,8 +213,12 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentQuestionLbl" destination="V4J-N8-2Rg" id="dFL-AK-6Kg"/>
+                        <outlet property="falseBtn" destination="sqt-bC-qPo" id="1zp-Z9-Ekd"/>
                         <outlet property="progressBar" destination="qgs-n7-8Ot" id="Gbh-Pt-edu"/>
                         <outlet property="questionLbl" destination="rvd-qB-tCa" id="QD5-WJ-WpE"/>
+                        <outlet property="totalQuestionsLbl" destination="b3L-as-azi" id="lsE-fB-NH3"/>
+                        <outlet property="trueBtn" destination="mws-Zd-lDn" id="O6f-6J-ErC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
