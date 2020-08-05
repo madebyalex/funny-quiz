@@ -122,7 +122,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mws-Zd-lDn">
-                                                <rect key="frame" x="0.0" y="5" width="350" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
                                                 <state key="normal" title="True">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -134,18 +134,19 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="mws-Zd-lDn" secondAttribute="bottom" id="1xl-Yf-tJu"/>
                                             <constraint firstAttribute="trailing" secondItem="mws-Zd-lDn" secondAttribute="trailing" id="BrH-Wa-XyS"/>
+                                            <constraint firstItem="mws-Zd-lDn" firstAttribute="top" secondItem="QlR-fQ-pnt" secondAttribute="top" id="PIu-HC-qRw"/>
                                             <constraint firstAttribute="height" constant="54" id="WGW-yi-F5F"/>
                                             <constraint firstItem="mws-Zd-lDn" firstAttribute="centerX" secondItem="QlR-fQ-pnt" secondAttribute="centerX" id="dCA-w0-Mbn"/>
                                             <constraint firstItem="mws-Zd-lDn" firstAttribute="leading" secondItem="QlR-fQ-pnt" secondAttribute="leading" id="lkB-TM-l5i"/>
-                                            <constraint firstItem="mws-Zd-lDn" firstAttribute="centerY" secondItem="QlR-fQ-pnt" secondAttribute="centerY" id="xAD-WN-8ie"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsn-Rs-8Xx">
                                         <rect key="frame" x="0.0" y="70" width="350" height="54"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-bC-qPo">
-                                                <rect key="frame" x="0.0" y="5" width="350" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
                                                 <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
                                                 <state key="normal" title="False">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -157,9 +158,10 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="sqt-bC-qPo" firstAttribute="top" secondItem="Vsn-Rs-8Xx" secondAttribute="top" id="9Bh-EL-Vch"/>
                                             <constraint firstItem="sqt-bC-qPo" firstAttribute="centerX" secondItem="Vsn-Rs-8Xx" secondAttribute="centerX" id="Hiy-aa-ppP"/>
+                                            <constraint firstAttribute="bottom" secondItem="sqt-bC-qPo" secondAttribute="bottom" id="YMN-E4-clG"/>
                                             <constraint firstItem="sqt-bC-qPo" firstAttribute="leading" secondItem="Vsn-Rs-8Xx" secondAttribute="leading" id="fN1-0e-YYS"/>
-                                            <constraint firstItem="sqt-bC-qPo" firstAttribute="centerY" secondItem="Vsn-Rs-8Xx" secondAttribute="centerY" id="px0-oX-qxu"/>
                                             <constraint firstAttribute="height" constant="54" id="uOW-Vh-ZgN"/>
                                             <constraint firstAttribute="trailing" secondItem="sqt-bC-qPo" secondAttribute="trailing" id="voa-qt-1DO"/>
                                         </constraints>

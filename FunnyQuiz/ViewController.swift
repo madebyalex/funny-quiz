@@ -17,9 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalQuestionsLbl: UILabel!
     
     let quiz = [
-        Question(text: "Pink is the most common colour of toilet paper in France", answer: "True"),
-        Question(text: "Scooby Doo’s full name is Scooberdy Doo", answer: "True"),
-        Question(text: "You can sneeze in your sleep", answer: "False")
+        Question(q: "Pink is the most common color of toilet paper in France", a: "True"),
+        Question(q: "Scooby Doo’s full name is Scooberdy Doo", a: "False"),
+        Question(q: "You can sneeze in your sleep", a: "False"),
+        Question(q: "The fortune cookie invented in China", a: "False"),
+        Question(q: "Back in the days in England was introduced a beard tax", a: "True"),
+        Question(q: "Interrobang is a question mark immediately followed by an exclamation mark", a: "True"),
+        Question(q: "Blessing is the collective noun for a group of unicorns", a: "True"),
+        Question(q: "USA has the most tornadoes by area", a: "False")
+        
     ]
     
     var questionNumber = 0
@@ -34,7 +40,15 @@ class ViewController: UIViewController {
 
     @IBAction func answerBtnPressed(_ sender: UIButton) {
         
-        checkAnswer(sender: sender.currentTitle ?? "")
+//        checkAnswer(sender: sender.currentTitle ?? "")
+        
+        if quiz[questionNumber].answer == sender.currentTitle {
+            sender.backgroundColor = #colorLiteral(red: 0, green: 0.6666666667, blue: 0.368627451, alpha: 1)
+            print("Correct!")
+        } else {
+            sender.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            print("Wrong")
+        }
         
         if questionNumber + 1 < totalQuestions {
             questionNumber += 1
@@ -43,21 +57,26 @@ class ViewController: UIViewController {
             questionNumber = 0
         }
         
-        updateUI()
+        
     }
     
-    func updateUI() {
+    @objc func updateUI() {
         currentQuestionLbl.text = String(questionNumber + 1)
         questionLbl.text = quiz[questionNumber].text
+        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
+        trueBtn.backgroundColor = UIColor.clear
+        falseBtn.backgroundColor = UIColor.clear
     }
     
-    func checkAnswer(sender: String) {
-        if quiz[questionNumber].answer == sender {
-            print("Correct!")
-        } else {
-            print("Wrong")
-        }
-    }
+//    func checkAnswer(sender: String) {
+//        if quiz[questionNumber].answer == sender {
+//            print("Correct!")
+//        } else {
+//            print("Wrong")
+//        }
+//    }
     
 }
 
