@@ -1,24 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Playtime.ttf">
+            <string>PlaytimeWithHotToddies</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg_quiz" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-wC-oXu">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <variation key="heightClass=compact" image="Bg_quiz_horiz"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YAA-Nh-bPQ">
+                                <rect key="frame" x="120" y="20" width="656" height="158.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jmp-tY-vCG">
+                                        <rect key="frame" x="249" y="0.0" width="158" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOX-fH-tIr">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="34"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="28"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4J-N8-2Rg" userLabel="Current question">
+                                                <rect key="frame" x="103" y="0.0" width="12.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o2-8c-Uha">
+                                                <rect key="frame" x="121.5" y="0.0" width="18" height="34"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3L-as-azi" userLabel="Total questions">
+                                                <rect key="frame" x="145.5" y="0.0" width="12.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="22"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink is the most common colour of toilet paper in France" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-qB-tCa" userLabel="Question">
+                                        <rect key="frame" x="28" y="42" width="600" height="116.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="Ebc-ba-pYJ">
+                                                <variation key="heightClass=compact" constant="600"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="48"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ebc-ba-pYJ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Ebc-ba-pYJ"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rvd-qB-tCa" firstAttribute="top" secondItem="jmp-tY-vCG" secondAttribute="bottom" constant="40" id="OSy-PF-3Gq"/>
+                                    <constraint firstAttribute="width" constant="240" id="Os1-T8-UUv"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Os1-T8-UUv"/>
+                                        <exclude reference="OSy-PF-3Gq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Os1-T8-UUv"/>
+                                        <exclude reference="OSy-PF-3Gq"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poY-3H-xbr" userLabel="progressBarWrap">
+                                <rect key="frame" x="144" y="283" width="608" height="12"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-n7-8Ot">
+                                        <rect key="frame" x="0.0" y="4.5" width="608" height="4"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="Kfb-ck-ksa"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.0" green="0.66666666669999997" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.14496040239726024" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qgs-n7-8Ot" secondAttribute="trailing" id="Keo-Ps-2ZG"/>
+                                    <constraint firstItem="qgs-n7-8Ot" firstAttribute="leading" secondItem="poY-3H-xbr" secondAttribute="leading" id="L6N-Gv-uEc"/>
+                                    <constraint firstItem="qgs-n7-8Ot" firstAttribute="centerY" secondItem="poY-3H-xbr" secondAttribute="centerY" id="Qgh-Dc-zxf"/>
+                                    <constraint firstAttribute="height" constant="12" id="SW4-rq-7fV"/>
+                                    <constraint firstItem="qgs-n7-8Ot" firstAttribute="centerX" secondItem="poY-3H-xbr" secondAttribute="centerX" id="dAO-K7-CRn"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-g1-fyl" userLabel="btnGroup">
+                                <rect key="frame" x="144" y="315" width="608" height="54"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-fQ-pnt">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mws-Zd-lDn">
+                                                <rect key="frame" x="0.0" y="5" width="296" height="44"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
+                                                <state key="normal" title="True">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mws-Zd-lDn" secondAttribute="trailing" id="BrH-Wa-XyS"/>
+                                            <constraint firstAttribute="height" constant="54" id="WGW-yi-F5F"/>
+                                            <constraint firstItem="mws-Zd-lDn" firstAttribute="centerX" secondItem="QlR-fQ-pnt" secondAttribute="centerX" id="dCA-w0-Mbn"/>
+                                            <constraint firstItem="mws-Zd-lDn" firstAttribute="leading" secondItem="QlR-fQ-pnt" secondAttribute="leading" id="lkB-TM-l5i"/>
+                                            <constraint firstItem="mws-Zd-lDn" firstAttribute="centerY" secondItem="QlR-fQ-pnt" secondAttribute="centerY" id="xAD-WN-8ie"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsn-Rs-8Xx">
+                                        <rect key="frame" x="312" y="0.0" width="296" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-bC-qPo">
+                                                <rect key="frame" x="0.0" y="5" width="296" height="44"/>
+                                                <fontDescription key="fontDescription" name="PlaytimeWithHotToddies" family="Playtime With Hot Toddies" pointSize="26"/>
+                                                <state key="normal" title="False">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="sqt-bC-qPo" firstAttribute="centerX" secondItem="Vsn-Rs-8Xx" secondAttribute="centerX" id="Hiy-aa-ppP"/>
+                                            <constraint firstItem="sqt-bC-qPo" firstAttribute="leading" secondItem="Vsn-Rs-8Xx" secondAttribute="leading" id="fN1-0e-YYS"/>
+                                            <constraint firstItem="sqt-bC-qPo" firstAttribute="centerY" secondItem="Vsn-Rs-8Xx" secondAttribute="centerY" id="px0-oX-qxu"/>
+                                            <constraint firstAttribute="height" constant="54" id="uOW-Vh-ZgN"/>
+                                            <constraint firstAttribute="trailing" secondItem="sqt-bC-qPo" secondAttribute="trailing" id="voa-qt-1DO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YAA-Nh-bPQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0G1-Lz-hEu"/>
+                            <constraint firstAttribute="bottom" secondItem="2HW-wC-oXu" secondAttribute="bottom" id="5cP-xt-gSK"/>
+                            <constraint firstAttribute="trailing" secondItem="YAA-Nh-bPQ" secondAttribute="trailing" constant="32" id="BPE-6w-vVr">
+                                <variation key="heightClass=compact" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="ltN-g1-fyl" firstAttribute="top" secondItem="poY-3H-xbr" secondAttribute="bottom" constant="20" id="CiF-mS-YVQ"/>
+                            <constraint firstItem="YAA-Nh-bPQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GOA-zy-HwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ltN-g1-fyl" secondAttribute="trailing" constant="32" id="LUM-P7-7S0">
+                                <variation key="heightClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="poY-3H-xbr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="XrF-aX-2Vu">
+                                <variation key="heightClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="2HW-wC-oXu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ajl-WF-r9H">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="2HW-wC-oXu" secondAttribute="trailing" id="ehY-1K-Agu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="poY-3H-xbr" secondAttribute="trailing" constant="32" id="jgs-6K-RdD">
+                                <variation key="heightClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="ltN-g1-fyl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="l48-HD-UVx">
+                                <variation key="heightClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ltN-g1-fyl" secondAttribute="bottom" constant="24" id="yPW-ox-R9a"/>
+                            <constraint firstItem="2HW-wC-oXu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ynG-sr-XSY"/>
+                            <constraint firstItem="YAA-Nh-bPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="zYH-2E-DU8">
+                                <variation key="heightClass=compact" constant="120"/>
+                            </constraint>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GOA-zy-HwR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0G1-Lz-hEu"/>
+                                <include reference="GOA-zy-HwR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="qgs-n7-8Ot" id="Gbh-Pt-edu"/>
+                        <outlet property="questionLbl" destination="rvd-qB-tCa" id="QD5-WJ-WpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bg_quiz" width="1200" height="2447"/>
+        <image name="Bg_quiz_horiz" width="2446" height="1202"/>
+    </resources>
 </document>
