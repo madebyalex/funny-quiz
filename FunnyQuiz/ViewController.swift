@@ -40,14 +40,10 @@ class ViewController: UIViewController {
 
     @IBAction func answerBtnPressed(_ sender: UIButton) {
         
-//        checkAnswer(sender: sender.currentTitle ?? "")
-        
         if quiz[questionNumber].answer == sender.currentTitle {
-            sender.backgroundColor = #colorLiteral(red: 0, green: 0.6666666667, blue: 0.368627451, alpha: 1)
-            print("Correct!")
+            sender.backgroundColor = #colorLiteral(red: 0.03087156829, green: 0.728444278, blue: 0.4165882431, alpha: 1)
         } else {
-            sender.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-            print("Wrong")
+            sender.backgroundColor = #colorLiteral(red: 0.9328396834, green: 0.2781540245, blue: 0.5247239358, alpha: 1)
         }
         
         if questionNumber + 1 < totalQuestions {
@@ -57,26 +53,17 @@ class ViewController: UIViewController {
             questionNumber = 0
         }
         
-        
+        Timer.scheduledTimer(timeInterval: 00.6, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
     @objc func updateUI() {
         currentQuestionLbl.text = String(questionNumber + 1)
         questionLbl.text = quiz[questionNumber].text
         
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-        
         trueBtn.backgroundColor = UIColor.clear
         falseBtn.backgroundColor = UIColor.clear
+        
+        progressBar.setProgress(Float(questionNumber + 1) / Float(totalQuestions), animated: true)
     }
-    
-//    func checkAnswer(sender: String) {
-//        if quiz[questionNumber].answer == sender {
-//            print("Correct!")
-//        } else {
-//            print("Wrong")
-//        }
-//    }
-    
 }
 
